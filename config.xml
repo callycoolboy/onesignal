@@ -13,18 +13,7 @@
     <preference name="android-minSdkVersion" value="15" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
     <plugin name="onesignal-cordova-plugin" spec="^2.0" />
-<!-- Add to your existing android platform sction -->
-<platform name="android">
 
-    <resource-file src="locales/android/drawable-mdpi/zamxa.png" target="res/drawable-mdpi/zamxa.png" />
-    <resource-file src="locales/android/drawable-hdpi/zamxa.png" target="res/drawable-hdpi/zamxa.png" />
-    <resource-file src="locales/android/drawable-xhdpi/zamxa.png" target="res/drawable-xhdpi/zamxa.png" />
-    <resource-file src="locales/android/drawable-xxhdpi/zamxa.png" target="res/drawable-xxhdpi/zamxa.png" />
-    <resource-file src="locales/android/drawable-xxxhdpi/zamxa.png" target="res/drawable-xxxhdpi/zamxa.png" />
-  
-  <!-- Uncomment if you have added a large icon. -->
-  <!--- <resource-file src="locales/android/drawable-xxxhdpi/ic_onesignal_large_icon_default.png" target="res/drawable-xxxhdpi/ic_onesignal_large_icon_default.png" /> --->
-</platform>
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -35,6 +24,11 @@
     
     <platform name="android">
         <allow-intent href="market:*" />
+        <resource-file src="locales/android/drawable-mdpi/zamxa.png" target="res/drawable-mdpi/zamxa.png" />
+    <resource-file src="locales/android/drawable-hdpi/zamxa.png" target="res/drawable-hdpi/zamxa.png" />
+    <resource-file src="locales/android/drawable-xhdpi/zamxa.png" target="res/drawable-xhdpi/zamxa.png" />
+    <resource-file src="locales/android/drawable-xxhdpi/zamxa.png" target="res/drawable-xxhdpi/zamxa.png" />
+    <resource-file src="locales/android/drawable-xxxhdpi/zamxa.png" target="res/drawable-xxxhdpi/zamxa.png" />
     </platform>
     
     <platform name="ios">
