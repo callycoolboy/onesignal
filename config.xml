@@ -24,7 +24,7 @@
   
   <!-- Uncomment if you have added a large icon. -->
   <!--- <resource-file src="locales/android/drawable-xxxhdpi/ic_onesignal_large_icon_default.png" target="res/drawable-xxxhdpi/ic_onesignal_large_icon_default.png" /> --->
-</platform></platform>
+</platform>
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
