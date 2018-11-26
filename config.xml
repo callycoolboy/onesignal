@@ -24,11 +24,11 @@
     
     <platform name="android">
         <allow-intent href="market:*" />
-<project-root>/locales/android/drawable-mdpi/ic_stat_onesignal_default.png
-<project-root>/locales/android/drawable-hdpi/ic_stat_onesignal_default.png
-<project-root>/locales/android/drawable-xhdpi/ic_stat_onesignal_default.png
-<project-root>/locales/android/drawable-xxhdpi/ic_stat_onesignal_default.png
-<project-root>/locales/android/drawable-xxxhdpi/ic_stat_onesignal_default.png
+<project-root>/locales/android/drawable-mdpi/ic_stat_onesignal_default.png</project-root>
+<project-root>/locales/android/drawable-hdpi/ic_stat_onesignal_default.png</project-root>
+<project-root>/locales/android/drawable-xhdpi/ic_stat_onesignal_default.png</project-root>
+<project-root>/locales/android/drawable-xxhdpi/ic_stat_onesignal_default.png</project-root>
+<project-root>/locales/android/drawable-xxxhdpi/ic_stat_onesignal_default.png</project-root>
     </platform>
     
     <platform name="ios">
