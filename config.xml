@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.onesignal.example" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.onesignal.example2" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     
     <name>OneSignalExample</name>
     <description>
@@ -10,11 +10,11 @@
     </author>
     
     <content src="index.html" />
-    <preference name="android-minSdkVersion" value="16" />
-<plugin name="cordova-plugin-device" source="npm" spec="~1.1.6" />
-<plugin name="cordova-plugin-inappbrowser" source="npm" spec="~1.7.1" />
-<plugin name="onesignal-cordova-plugin" source="npm" spec="2.3.3" />
-<plugin name="cordova-plugin-whitelist" source="npm" spec="^1.3.3" />
+<engine name="android" spec="~7.0.0" />
+<gap:plugin name="onesignal-cordova-plugin" source="npm" />
+<preference name="phonegap-version" value="cli-8.0.0" />
+<preference name="android-build-tool" value="gradle" />
+<preference name="android-minSdkVersion" value="15" />
 
     <access origin="*" />
     <allow-intent href="http://*/*" />
