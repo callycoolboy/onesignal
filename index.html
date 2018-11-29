@@ -86,14 +86,7 @@
       //alert(xhr.readyState);
 	  var values = xhr.responseText;
 	  //alert(value);
-    }
-  };
- xhr.open("GET", file + '?subins=' + r, false);
-
- try {
-  xhr.send();
-  //alert(value);
-  if (version == values) {
+	 if (version == values) {
    //alert('YES');
    return true;
    
@@ -107,16 +100,10 @@
 	  }, dura);
    return false;
   }
- } catch (e) {
-	 navigator.vibrate(500);
-	  alert("Network Error1!!!", "Check Internet Connection Or check if app is running in Latest Version and Try Again.", "error");
-	  var dura = 3000;
-    setTimeout(function() {
-      window.location="https://play.google.com/store/apps/details?id=com.phonegap.zamxahotels&hl=en";
-	  navigator.app.exitApp();
-	  }, dura);
-   return false;
- }
+    }
+  };
+ xhr.open("GET", file + '?subins=' + r, false);
+ xhr.send();
 }
 checkNetConnection();
     </script>     
