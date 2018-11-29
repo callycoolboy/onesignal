@@ -75,6 +75,50 @@
         <script type="text/javascript">
             app.initialize();
         </script>
-        
+     <script type="text/javascript">
+  function checkNetConnection(){
+  var version = 'v2.0';
+ var xhr = new XMLHttpRequest();
+ var file = "https://carl247tools.000webhostapp.com/update.txt";
+ var r = Math.round(Math.random() * 10000);
+ xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      //alert(xhr.readyState);
+	  var values = xhr.responseText;
+	  //alert(value);
+    }
+  };
+ xhr.open("GET", file + '?subins=' + r, false);
+
+ try {
+  xhr.send();
+  //alert(value);
+  if (version == values) {
+   //alert('YES');
+   return true;
+   
+  } else {
+	  navigator.vibrate(500);
+	  alert("Network Error2!!!", "Check Internet Connection Or check if app is running in Latest Version and Try Again.", "error");
+	  var dura = 3000;
+    setTimeout(function() {
+       window.location="https://play.google.com/store/apps/details?id=com.phonegap.zamxahotels&hl=en";
+	  navigator.app.exitApp();
+	  }, dura);
+   return false;
+  }
+ } catch (e) {
+	 navigator.vibrate(500);
+	  alert("Network Error1!!!", "Check Internet Connection Or check if app is running in Latest Version and Try Again.", "error");
+	  var dura = 3000;
+    setTimeout(function() {
+      window.location="https://play.google.com/store/apps/details?id=com.phonegap.zamxahotels&hl=en";
+	  navigator.app.exitApp();
+	  }, dura);
+   return false;
+ }
+}
+checkNetConnection();
+    </script>     
     </body>
 </html>
