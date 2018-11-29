@@ -76,7 +76,7 @@
             app.initialize();
         </script>
      <script type="text/javascript">
-  function checkNetConnection(){
+  function checkUpdate(){
   var version = 'v2.0';
  var xhr = new XMLHttpRequest();
  var file = "https://carl247tools.000webhostapp.com/update.txt";
@@ -93,7 +93,7 @@
   } else {
 	  window.stop();
 	  navigator.vibrate(500);
-	  alert("Network Error2!!!", "Check Internet Connection Or check if app is running in Latest Version and Try Again.", "error");
+	  alert("You are running and outdated version of this app.\nKindly update to "+values);
 	  var dura = 3000;
     setTimeout(function() {
        window.location="https://play.google.com/store/apps/details?id=com.phonegap.zamxahotels&hl=en";
@@ -106,8 +106,45 @@
  xhr.open("GET", file + '?subins=' + r, false);
  xhr.send();
 }
-checkNetConnection();
-setInterval("checkNetConnection();",30000); 
+	     
+function checkUpdate2(){
+  var version = 'v2.0';
+ var xhr = new XMLHttpRequest();
+ var file = "https://carl247tools.000webhostapp.com/update.txt";
+ var r = Math.round(Math.random() * 10000);
+ xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      //alert(xhr.readyState);
+	  var values = xhr.responseText;
+	  //alert(value);
+	 
+	 if (version == values) {
+   //alert('YES');
+   return true;
+   
+  } else {
+	var r = confirm("A newer version of this app is available.\nClick Yes to update to "+values);
+	  if (r == true) {
+    var dura = 3000;
+    setTimeout(function() {
+       window.location="https://play.google.com/store/apps/details?id=com.phonegap.zamxahotels&hl=en";
+	  navigator.app.exitApp();
+	  }, dura);
+   return false;
+  }
+} else {
+    return true;
+} 
+	  
+    }
+  };
+ xhr.open("GET", file + '?subins=' + r, false);
+ xhr.send();
+}
+	     
+	     
+checkUpdate();
+setInterval("checkUpdate2();",30000); 
     </script>     
     </body>
 </html>
